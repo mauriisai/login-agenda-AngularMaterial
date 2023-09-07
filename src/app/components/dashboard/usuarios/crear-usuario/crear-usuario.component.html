@@ -1,0 +1,52 @@
+<mat-toolbar>
+    <span>Formulario Nuevo Usuario</span>
+</mat-toolbar>
+<mat-card style="margin-top: 10px;">
+
+    <form [formGroup]="form" (ngSubmit)="agregarUsuario()">
+        <mat-grid-list cols="4" rowHeight="70px">
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <mat-form-field class="ancho" style="margin-top: 10px;">
+                    <mat-label>Usuario</mat-label>
+                    <input matInput autocomplete="off" formControlName="usuario">
+                </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile [colspan]="3" [rowspan]="5" [style.background]="'#DDBDF1'">
+                <img src="./assets/img/programador.png" width="250px" height="250px">
+            </mat-grid-tile>
+
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <mat-form-field class="ancho">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput autocomplete="off" formControlName="nombre">
+                </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <mat-form-field class="ancho">
+                    <mat-label>Apellido</mat-label>
+                    <input matInput autocomplete="off" formControlName="apellido">
+                </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <mat-form-field class="ancho">
+                    <mat-label>Sexo</mat-label>
+                    <mat-select formControlName="sexo">
+                        <mat-option *ngFor="let item of sexo" [value]="item">
+                            {{item}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <button mat-raised-button>Volver</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="submit" [disabled]="form.invalid" mat-raised-button color="primary">Registrar</button>
+            </mat-grid-tile>
+
+        </mat-grid-list>
+        <br>
+    </form>
+</mat-card>

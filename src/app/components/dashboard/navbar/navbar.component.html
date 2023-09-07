@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+    <span>App Directorio</span>
+    <span class="example-spacer"></span>
+ <!-- Creacion de menu dinamico -->
+    <button mat-button *ngFor="let item of menu" [routerLink]="item.redirect">{{ item.nombre }}</button>
+
+    <span class="example-spacer"></span>
+    <button routerLink="/login" mat-icon-button class="example-icon" aria-label="icon-button with menu icon">
+    <mat-icon>logout</mat-icon>
+    </button>
+</mat-toolbar>
