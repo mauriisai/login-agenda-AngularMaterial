@@ -1,11 +1,11 @@
 # CrudAgendaMaterial
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
-USUARIO PARA LOGUEARSE usuario=='mariavh' && password=='admin00'
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+USUARIO PARA LOGUEARSE -> usuario=='mariavh' && password=='admin00'
 
 ## Code scaffolding
 
